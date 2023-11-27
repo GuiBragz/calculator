@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    double v1, v2, result;
+    char op;
+    printf("CALCULADORA\n");
+    printf("=============================================\n");
+    printf("adicione o primeiro valor:\n");
+  scanf(" %lf", &v1);
+  printf("adicione o operador a ser usado (/,*,+,-):\n");
+  scanf(" %c", &op);
+  printf("adicione o segundo valor:\n");
+    scanf(" %lf", &v2);
+
+    switch (op) {
+        case '+':
+            result = v1 + v2;
+            printf("Resultado da operação: %.2lf\n", result);
+            break;
+        case '-':
+            result = v1 - v2;
+            printf("Resultado da operação: %.2lf\n", result);
+            break;
+        case '*':
+            result = v1 * v2;
+            printf("Resultado da operação: %.2lf\n", result);
+            break;
+        case '/':
+            if (v2 != 0) {
+                result = v1 / v2;
+                printf("Resultado da operação: %.2lf\n", result);
+            } else {
+                printf("Erro! Divisão por zero.\n");
+            }
+            break;
+        default:
+            printf("Operador inválido.\n");
+    }
+
+    return main;
+}
